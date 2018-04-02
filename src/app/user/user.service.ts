@@ -16,7 +16,7 @@ export class UserService {
   private userUrl = 'http://localhost:8087/user/lista'; // '/api' // 'http://localhost:8080/user-portal/api';
 
   public getUsers() {
-    return this.http.get(this.userUrl);
+    return this.http.get<User[]>(this.userUrl);
     //return this.http.post(this.userUrl);
   }
 
